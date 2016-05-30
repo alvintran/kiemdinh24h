@@ -18,18 +18,20 @@
  * @package WordPress
  */
 
+$config = require_once('.env.php');
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'kiemdinh24h');
+define('DB_NAME', $config['DB_NAME']);
 
 /** MySQL database username */
-define('DB_USER', 'homestead');
+define('DB_USER', $config['DB_USER']);
 
 /** MySQL database password */
-define('DB_PASSWORD', 'secret');
+define('DB_PASSWORD', $config['DB_PASSWORD']);
 
 /** MySQL hostname */
-define('DB_HOST', '127.0.0.1');
+define('DB_HOST', $config['DB_HOST']);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
